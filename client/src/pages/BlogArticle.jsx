@@ -77,7 +77,11 @@ export default function BlogArticle() {
                                 <Link key={index} to={"../blog/" + recommend._id} className="text-decoration-none text-dark">
                                     <Row className="gx-4 gy-3">
                                         <Col lg="5">
-                                            <img src={baseApi + 'uploads/cover/' + recommend.event.eventCover} className="img-thumbnail-small" />
+                                            <img src={baseApi + 'uploads/cover/' + recommend.event.eventCover} className="img-thumbnail-small"
+                                                onError={({ currentTarget }) => {
+                                                    currentTarget.onerror = null;
+                                                    currentTarget.src = "/defaultimg.jpg";
+                                                }} />
                                         </Col>
                                         <Col lg="7">
                                             <div>

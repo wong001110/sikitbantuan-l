@@ -24,11 +24,11 @@ export default function NavigationBar() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto justify-content-between w-100 fw-bold">
-                        <Nav.Link href="/about">About Us</Nav.Link>
-                        <Nav.Link href="/contact">Contact Us</Nav.Link>
                         <Nav.Link href="/sponsor">Become a Sponsor</Nav.Link>
                         <Nav.Link href="/involved">Involved Now</Nav.Link>
                         <Nav.Link href="/blog">Blog</Nav.Link>
+                        <Nav.Link href="/about">About Us</Nav.Link>
+                        <Nav.Link href="/contact">Contact Us</Nav.Link>
                         {user ?
                             <Nav.Link to="" onClick={logout}>Sign Out</Nav.Link> :
                             <Nav.Link href="/login">Sign In</Nav.Link>

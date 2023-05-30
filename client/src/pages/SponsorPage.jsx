@@ -59,7 +59,11 @@ export default function SponsorPage() {
                                 <Link to={"/event/" + item._id} className="text-decoration-none text-dark">
                                     <Card className="involved-card">
                                         <div className="position-relative">
-                                            <Card.Img variant="top" src={baseApi + "uploads/cover/" + item.eventCover} />
+                                            <Card.Img variant="top" src={baseApi + "uploads/cover/" + item.eventCover}
+                                                onError={({ currentTarget }) => {
+                                                    currentTarget.onerror = null;
+                                                    currentTarget.src = "/defaultimg.jpg";
+                                                }} />
                                             <span className={eventCurrStatus(item.eventStatus) + " px-5 position-absolute bottom-0 text-white"} style={{ left: 0 }}>{item.eventStatus}</span>
                                         </div>
                                         <Card.Body className="d-flex flex-column justify-content-between">
@@ -73,7 +77,11 @@ export default function SponsorPage() {
                                             </Card.Text>
                                             <div className="d-flex justify-content-between align-items-center">
                                                 <div className="d-flex justify-content-between align-items-center">
-                                                    <Link to="/profile"><img src={baseApi + "uploads/avatar/" + item.user.user_avatar} className="involved-avatar me-2" /></Link>
+                                                    <Link to="/profile"><img src={baseApi + "uploads/avatar/" + item.user.user_avatar} className="involved-avatar me-2"
+                                                        onError={({ currentTarget }) => {
+                                                            currentTarget.onerror = null;
+                                                            currentTarget.src = "/defaulticon.jpg";
+                                                        }} /></Link>
                                                     <p className="m-0">By <b>{item.user.user_name}</b></p>
                                                 </div>
                                                 <div>

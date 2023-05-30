@@ -114,7 +114,11 @@ export default function InvolvedPage() {
                             <Link to={"/event/" + event._id} className="text-decoration-none text-dark">
                                 <Card className="involved-card">
                                     <div className="position-relative">
-                                        <Card.Img variant="top" src={baseApi + "uploads/cover/" + event.eventCover} />
+                                        <Card.Img variant="top" src={baseApi + "uploads/cover/" + event.eventCover}
+                                            onError={({ currentTarget }) => {
+                                                currentTarget.onerror = null;
+                                                currentTarget.src = "/defaultimg.jpg";
+                                            }} />
                                         <span className={eventCurrStatus(event.eventStatus) + " px-5 position-absolute bottom-0 text-white"} style={{ left: 0 }}>{event.eventStatus}</span>
                                     </div>
                                     <Card.Body className="d-flex flex-column justify-content-between">
