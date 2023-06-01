@@ -1,6 +1,6 @@
 # Guide for open the project
 ### Please follow the command accordingly(you need open 2 terminal)
-*This is a reactjs project, make sure your nodejs version and the nodejs is installed*
+*This is a reactjs project(Vite) with nodejs version 18.16.0, make sure your nodejs version and the nodejs is installed*
 
 ### Start the reactjs(vite)
 1) Open the terminal
