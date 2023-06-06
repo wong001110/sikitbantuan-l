@@ -2,6 +2,8 @@
 ### Please follow the command accordingly(you need open 2 terminal)
 *This is a reactjs project(Vite) with nodejs version 18.16.0, make sure your nodejs version and the nodejs is installed*
 
+You may refer to the [Behance Link](https://www.behance.net/gallery/170714639/SikitBantuan-Charitiable-Event-Platform)
+
 ### Start the reactjs(vite)
 1) Open the terminal
 2) ***cd client***
